@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Login</title>
+    <title>Thêm Sản Phẩm</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -18,10 +18,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://localhost:2000/danhsach">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="http://localhost:2000/them">Them</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,32 +47,36 @@
     <form method="post" action="/upload" enctype="multipart/form-data">
 
         <div class="form-group">
-            <label for="exampleInputPassword1">UserName</label>
-            <input  type="text" class="form-control" id="username" name="username">
+            <label for="exampleInputPassword1">Nhập Tên Sản Phẩm</label>
+            <input  type="text" class="form-control" id="namesp" name="namesp">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Số Lượng</label>
+            <input  type="number" class="form-control" id="sl" name="sl" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Giá</label>
+            <input  type="number" class="form-control" id="gia" name="gia" >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Giá Sale</label>
+            <input  type="number" class="form-control" id="giasale" name="giasale" >
         </div>
 
-        <div class="form-group">
-            <label for="exampleInputPassword1">PassWord</label>
-            <input  type="password" class="form-control" id="password" name="password" >
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">RePassWord</label>
-            <input  type="password" class="form-control" id="rePassword" name="rePassword" >
-        </div>
 
         <div class="form-group">
-            <label for="exampleInputPassword1">SĐT</label>
-            <input  type="number" class="form-control" id="sdt" name="sdt" >
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputPassword1">Upload File</label>
+            <label for="exampleInputPassword1">Upload File Photo Sản Phẩm</label>
             <input type="file" class="form-control" name="avatar" id="avatar">
         </div>
 
-        <button type="submit" class="btn btn-primary" id="submit" value="UpLoad">SignUp</button>
+        <button type="submit" class="btn btn-primary" id="submit" value="UpLoad" >Nhập Sản Phẩm</button>
 
     </form>
+<!--    <script>-->
+<!--        function button_them() {-->
+<!--            window.location.href='http://localhost:2000/them';-->
+<!--        }-->
+<!--    </script>-->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
             crossorigin="anonymous"></script>

@@ -16,15 +16,15 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">Home</a>
 
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="Home.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="http://localhost:2000/them">Thêm <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="themlist.html">Thêm</a>
+                    <a class="nav-link" href="http://localhost:2000/danhsach">List</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
@@ -38,45 +38,22 @@
     </nav>
     <ul class="list-group mb-5">
         <li class="list-group-item p-4">
-            <div class="row">
-                <img src="https://www.w3schools.com/howto/img_avatar.png"
-                     width="80" height="80">
+            {{#each dulieu }}
+            <div  class="row">
+                <img src="./uploads/{{this.AVATAR}}" width="100" height="140"/>
                 <div class="col">
-                    <p>Họ tên SV: <span> Vũ Tú</span></p>
-                    <p>MSSV: <span>PH09410</span></p>
+                    <p>Sản Phẩm: <span>{{this.NAMESP}}</span></p>
+                    <p>Số Lượng: <span>{{this.SLSP}}</span></p>
+                    <p>Giá: <span>{{this.GIA}}</span></p>
+                    <p>Sale: <span>{{this.GIASALE}}</span></p>
                 </div>
-            </div>
-        </li>
-        <li class="list-group-item p-4">
-            <div class="row">
-                <img src="https://www.w3schools.com/howto/img_avatar.png"
-                     width="80" height="80">
-                <div class="col">
-                    <p>Họ tên SV: <span> Vũ Tú</span></p>
-                    <p>MSSV: <span>PH09410</span></p>
 
-                </div>
+                <button onclick="window.location='/xoa'" type="button" class="close" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+
             </div>
-        </li>
-        <li class="list-group-item p-4">
-            <div class="row">
-                <img src="https://www.w3schools.com/howto/img_avatar.png"
-                     width="80" height="80">
-                <div class="col">
-                    <p>Họ tên SV: <span> Vũ Tú</span></p>
-                    <p>MSSV: <span>PH09410</span></p>
-                </div>
-            </div>
-        </li>
-        <li class="list-group-item p-4">
-            <div class="row">
-                <img src="https://www.w3schools.com/howto/img_avatar.png"
-                     width="80" height="80">
-                <div class="col">
-                    <p>Họ tên SV: <span> Vũ Tú</span></p>
-                    <p>MSSV: <span>PH09410</span></p>
-                </div>
-            </div>
+            {{/each}}
         </li>
     </ul>
 </div>
